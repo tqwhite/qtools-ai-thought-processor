@@ -1,0 +1,1 @@
+AI thought process framework
