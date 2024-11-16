@@ -87,7 +87,7 @@ Here is an example of the configuration for a Thought Process.
     [get-specification-data]
     spreadsheetPath = <!sourceFilesPath!>/ImplementationSpecification.xlsx
 
-Acknowledgment and Copyright
+### Acknowledgment and Copyright
 
 Development of this open source software was supported by the fine people of Access for Learning, LLC supporting thei mission of educational data interoperability.
 
