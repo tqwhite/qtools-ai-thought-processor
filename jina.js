@@ -34,7 +34,7 @@ const moduleFunction = function ({ UNUSED } = {}) {
 			)({
 				jinaCore,
 				thoughtProcessName:
-					thoughtProcessSpecification.thinkerListGroupName,
+					thoughtProcessSpecification.conversationThinkerListName,
 			}),
 		);
 
