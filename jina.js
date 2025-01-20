@@ -60,7 +60,7 @@ const moduleFunction = function ({ UNUSED } = {}) {
 
 	const findTheAnswer = async ({
 		facilitators,
-		targetObjectNameList,
+		initialThinkerData,
 		debugLogName,
 	}) => {
 		// ===========================================================================
@@ -83,7 +83,7 @@ const moduleFunction = function ({ UNUSED } = {}) {
 		// COMBINE SMARTYPANTS EXECUTORS INTO THE MAIN EXECUTION OBJECT
 
 		// Initialize runTask function
-		const { runTask } = require('./lib/task-runner')({ facilitators });
+		const { runTask } = require('./lib/task-runner')({ facilitators, initialThinkerData });
 
 		// ===========================================================================
 		// EXECUTE THE PROCESS FOR SOME OR ALL OF THE POSSIBLE ELEMENTS
@@ -120,7 +120,10 @@ const moduleFunction = function ({ UNUSED } = {}) {
 process.global = {};
 process.global.xLog = xLog;
 
-const initFunc = ({ configFileBaseName } = {}) => {
+const initFunc = ({ configFileBaseName, applicationBasePath } = {}) => {
+	if (applicationBasePath) {
+		process.global.applicationBasePath = applicationBasePath;
+	}
 	require('./lib/assemble-configuration-show-help-maybe-exit')({
 		configSegmentName: 'jina/system',
 		configFileBaseName,
