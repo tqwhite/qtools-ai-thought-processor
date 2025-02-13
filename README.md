@@ -102,7 +102,7 @@ In this sample application, Thinkers parse data files and access external HTTP r
 
 ### Versions
 
-1.0.11 added applicationControls property to initialization to allow commandLineParameters to be added by calling program for its purposes.
+1.0.9 added applicationControls property to initialization to allow commandLineParameters to be added by calling program for its purposes.
 
 ### Acknowledgment and Copyright
 
