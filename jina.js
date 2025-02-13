@@ -120,13 +120,14 @@ const moduleFunction = function ({ UNUSED } = {}) {
 process.global = {};
 process.global.xLog = xLog;
 
-const initFunc = ({ configFileBaseName, applicationBasePath } = {}) => {
+const initFunc = ({ configFileBaseName, applicationBasePath, applicationControls } = {}) => {
 	if (applicationBasePath) {
 		process.global.applicationBasePath = applicationBasePath;
 	}
 	require('./lib/assemble-configuration-show-help-maybe-exit')({
 		configSegmentName: 'jina/system',
 		configFileBaseName,
+		applicationControls,
 		terminationFunction: process.exit,
 		callback: () => {},
 	}); //contributes to process.global
