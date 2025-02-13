@@ -1,6 +1,6 @@
 {
   "name": "jina-core",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "A complex thinking tool",
   "main": "jina-core.js",
   "scripts": {
